@@ -5,26 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maaz Uddin - Personal Website</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="sidebar">
+        <ul>
+            <li>
+                <a href="#about" class="nav-item">
+                    <i class="fas fa-user"></i>
+                    <span class="nav-text">About</span>
+                </a>
+            </li>
+            <li>
+                <a href="#experience" class="nav-item">
+                    <i class="fas fa-briefcase"></i>
+                    <span class="nav-text">Experience</span>
+                </a>
+            </li>
+            <li>
+                <a href="#teaching" class="nav-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span class="nav-text">Teaching</span>
+                </a>
+            </li>
+            <li>
+                <a href="#education" class="nav-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span class="nav-text">Education</span>
+                </a>
+            </li>
+            <li>
+                <a href="#contact" class="nav-item">
+                    <i class="fas fa-envelope"></i>
+                    <span class="nav-text">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
     <main>
         <section id="hero">
             <div class="container">
                 <h1>Maaz Uddin</h1>
-                <p class="subtitle">Software Engineer at Bluefin</p>
+                <p class="subtitle">Engineering Lead at Bluefin</p>
                 <p class="location">London, England, United Kingdom</p>
             </div>
         </section>
@@ -41,7 +65,43 @@
                 <h2>Experience</h2>
                 <div class="experience-item">
                     <h3>Bluefin (Formerly Firefly)</h3>
-                    <p class="role">Software Engineer</p>
+                    <p class="role">Engineering Lead</p>
+                    <p class="duration">Apr 2022 - Present</p>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Amazon</h3>
+                    <p class="role">Software Development Engineer II</p>
+                    <p class="duration">Sep 2018 - Apr 2022 · 3 yrs 8 mos</p>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Blockchain at Berkeley</h3>
+                    <p class="role">Researcher, Developer</p>
+                    <p class="duration">Sep 2017 - May 2018 · 9 mos</p>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Amazon</h3>
+                    <p class="role">SDE Intern</p>
+                    <p class="duration">May 2017 - Aug 2017 · 4 mos</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="teaching">
+            <div class="container">
+                <h2>Teaching</h2>
+                <div class="experience-item">
+                    <h3>University of California, Berkeley</h3>
+                    <p class="role">Teaching Assistant - Intro to iOS Development</p>
+                    <p class="duration">Jan 2017 - May 2017 · 5 mos</p>
+                </div>
+
+                <div class="experience-item">
+                    <h3>University of California, Berkeley</h3>
+                    <p class="role">Computer Lab Assistant - CS 10</p>
+                    <p class="duration">Jan 2015 - Dec 2015 · 1 yr</p>
                 </div>
             </div>
         </section>
@@ -51,28 +111,8 @@
                 <h2>Education</h2>
                 <div class="education-item">
                     <h3>University of California, Berkeley</h3>
-                    <p>Bachelor's Degree (B.A.)</p>
-                    <p>2014 - 2018</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <div class="container">
-                <h2>Projects</h2>
-                <div class="project-grid">
-                    <div class="project-item">
-                        <h3>Gitlet (Java)</h3>
-                        <p>A mini version-control system that mimics some of the basic features of git.</p>
-                    </div>
-                    <div class="project-item">
-                        <h3>Lines of Action AI (Java)</h3>
-                        <p>An AI that makes decisions based on a given 8x8 game board using alpha-beta pruning.</p>
-                    </div>
-                    <div class="project-item">
-                        <h3>SQL Database (Java)</h3>
-                        <p>A miniature relational database management system (DBMS).</p>
-                    </div>
+                    <p class="degree">Bachelor of Arts (B.A.), Computer Science</p>
+                    <p class="duration">2014 - 2018</p>
                 </div>
             </div>
         </section>
