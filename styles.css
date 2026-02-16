@@ -67,8 +67,25 @@ nav ul li a:hover {
     text-align: center;
     background-color: var(--background-color);
     color: var(--text-color);
-    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+    transition: height 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+#hero.collapsed {
+    height: 0;
+}
+
+.hero-content {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#hero.collapsing .hero-content {
+    opacity: 0;
+    transform: scale(0.85) translateY(-30px);
+}
+
+
 
 #hero h1 {
     font-size: 3rem;
@@ -82,6 +99,47 @@ nav ul li a:hover {
 
 .location {
     font-size: 1.1rem;
+}
+
+/* Fixed Header */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 80px;
+    right: 0;
+    background-color: var(--background-color);
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.fixed-header.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.fixed-header .name {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.fixed-header .company {
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+.fixed-header .section-title {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    padding-right: 1.5rem;
 }
 
 /* Sections */
@@ -258,4 +316,122 @@ footer {
 /* Adjust main content to accommodate sidebar */
 main {
     margin-left: 80px;
+}
+
+/* About section styling */
+.about-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-content .greeting {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.about-content .description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+/* Experience details */
+.experience-details {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.8rem;
+}
+
+.experience-details li {
+    padding: 0.3rem 0;
+    padding-left: 1rem;
+    position: relative;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+.experience-details li::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Tags */
+.acquired-tag, .team-tag {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #888;
+}
+
+.wip-tag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+
+/* Skills section */
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.skill-category {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+.skill-category h4 {
+    margin-bottom: 0.8rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 0.35rem 0.75rem;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    border: 1px solid var(--border-color);
+}
+
+/* Project description */
+.project-description {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    opacity: 0.85;
+    line-height: 1.6;
+    margin-top: 0.3rem;
+}
+
+/* Education coursework */
+.coursework {
+    font-size: 0.85rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    margin-top: 0.5rem;
+    line-height: 1.6;
 } 

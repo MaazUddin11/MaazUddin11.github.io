@@ -9,6 +9,11 @@
     <script defer src="script.js"></script>
 </head>
 <body>
+    <div class="fixed-header">
+        <div class="name">Maaz Uddin · <span class="company">Software Engineer</span></div>
+        <div class="section-title"></div>
+    </div>
+
     <nav class="sidebar">
         <ul>
             <li>
@@ -21,6 +26,18 @@
                 <a href="#experience" class="nav-item">
                     <i class="fas fa-briefcase"></i>
                     <span class="nav-text">Experience</span>
+                </a>
+            </li>
+            <li>
+                <a href="#skills" class="nav-item">
+                    <i class="fas fa-code"></i>
+                    <span class="nav-text">Skills</span>
+                </a>
+            </li>
+            <li>
+                <a href="#projects" class="nav-item">
+                    <i class="fas fa-rocket"></i>
+                    <span class="nav-text">Projects</span>
                 </a>
             </li>
             <li>
@@ -47,16 +64,22 @@
     <main>
         <section id="hero">
             <div class="container">
-                <h1>Maaz Uddin</h1>
-                <p class="subtitle">Engineering Lead at Bluefin</p>
-                <p class="location">London, England, United Kingdom</p>
+                <div class="hero-content">
+                    <h1>Maaz Uddin</h1>
+                    <p class="subtitle">Software Engineer</p>
+                </div>
             </div>
         </section>
 
         <section id="about">
             <div class="container">
                 <h2>About Me</h2>
-                <p>Software engineer with experience in building scalable applications and systems.</p>
+                <div class="about-content">
+                    <p class="greeting">Hey there, I'm Maaz</p>
+                    <p class="description" style="text-align: left;">
+                        Previous founding engineer who launched and scaled a trading exchange from zero to &gt;$50B in volume and over 100M API reqs/day. 7+ years of shipping production systems at startup and FAANG scale with experience in customer-facing SDK development, institutional client onboarding, and cross-functional technical leadership. Currently building LLM powered apps and pursuing roles in frontier AI development.
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -64,27 +87,107 @@
             <div class="container">
                 <h2>Experience</h2>
                 <div class="experience-item">
-                    <h3>Bluefin (Formerly Firefly)</h3>
-                    <p class="role">Engineering Lead</p>
-                    <p class="duration">Apr 2022 - Present</p>
+                    <h3>Interop Labs <span class="acquired-tag">(acquired)</span></h3>
+                    <p class="role">Backend Reliability Engineer</p>
+                    <p class="duration">Sep 2025 - Dec 2025 · London, UK</p>
+                    <ul class="experience-details">
+                        <li>Integrated new chains (Hedera and Stellar) into Axelar ITS, including different token management capability and event processing</li>
+                        <li>Built automated gas cost estimator and contract funder for Hedera's native tokens to reduce transfer error rates</li>
+                        <li>Upgraded Stellar/Soroban RPC integration to improve event response streams and transaction status handling via API</li>
+                    </ul>
                 </div>
 
                 <div class="experience-item">
-                    <h3>Amazon</h3>
+                    <h3>Bluefin Exchange</h3>
+                    <p class="role">Founding Engineer / Engineering Lead</p>
+                    <p class="duration">Apr 2022 - Jun 2025 · London, UK</p>
+                    <ul class="experience-details">
+                        <li>Owned development of SDKs, public docs, and communications to onboard 15+ institutional trading partners</li>
+                        <li>Built a low-latency trading platform that scaled to handle over 100M API reqs/day across 3 ecosystems, leading to >$50B in perpetuals trading volume</li>
+                        <li>Decomposed monolith into event-driven architecture with K8s, Kafka, Redis caching, and optimized DB performance</li>
+                        <li>Partnered with CTO to scale engineering org - interviewed 100+ candidates, mentored 8 engineers from junior to senior level</li>
+                        <li>Led the $BLUE token launch across all engineering teams, coordinating with marketing, legal, and BD for distribution to 150k+ users</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Amazon <span class="team-tag">FinTech</span></h3>
                     <p class="role">Software Development Engineer II</p>
-                    <p class="duration">Sep 2018 - Apr 2022 · 3 yrs 8 mos</p>
+                    <p class="duration">Sep 2018 - Apr 2022 · Seattle, WA</p>
+                    <ul class="experience-details">
+                        <li>Built ML applications to identify and prevent $100MM+ duplicate/fraudulent invoices; created a false positive reduction system that decreased output volume by 43%</li>
+                        <li>Collaborated with scientists to fine tune models, increasing recovered amount by $10M+ YOY</li>
+                        <li>Designed event-driven microservices architecture that automated ML model deployment pipeline, reducing times from weeks to minutes</li>
+                    </ul>
                 </div>
 
                 <div class="experience-item">
                     <h3>Blockchain at Berkeley</h3>
-                    <p class="role">Researcher, Developer</p>
-                    <p class="duration">Sep 2017 - May 2018 · 9 mos</p>
+                    <p class="role">Head of Business Development for Research</p>
+                    <p class="duration">Sep 2017 - May 2018 · Berkeley, CA</p>
+                    <ul class="experience-details">
+                        <li>Technical consulting to C-level execs on blockchain solutions; offered detailed reviews on 6 technical whitepapers</li>
+                        <li>Wrote a Summary-of-Knowledge comparing security of Proof-of-Stake protocols, presented at Ethereal SF Conference</li>
+                    </ul>
                 </div>
+            </div>
+        </section>
 
+        <section id="skills">
+            <div class="container">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Languages</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Go</span>
+                            <span class="skill-tag">Rust</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>AI / ML</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">OpenAI API</span>
+                            <span class="skill-tag">RAG</span>
+                            <span class="skill-tag">Vector DBs</span>
+                            <span class="skill-tag">Embeddings</span>
+                            <span class="skill-tag">LLM Eval</span>
+                            <span class="skill-tag">Prompt Engineering</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Stack</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Kafka</span>
+                            <span class="skill-tag">Postgres</span>
+                            <span class="skill-tag">Redis</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">REST APIs</span>
+                            <span class="skill-tag">Microservices</span>
+                            <span class="skill-tag">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>AI / LLM Projects</h2>
                 <div class="experience-item">
-                    <h3>Amazon</h3>
-                    <p class="role">SDE Intern</p>
-                    <p class="duration">May 2017 - Aug 2017 · 4 mos</p>
+                    <h3>LLM Chatbot</h3>
+                    <p class="project-description">Built a chatbot using OpenAI function calls to orchestrate external APIs with streaming, token tracking, and error handling</p>
+                </div>
+                <div class="experience-item">
+                    <h3>Production RAG System <span class="wip-tag">WIP</span></h3>
+                    <p class="project-description">Currently learning text chunking, embeddings, and vector DBs</p>
                 </div>
             </div>
         </section>
@@ -94,14 +197,12 @@
                 <h2>Teaching</h2>
                 <div class="experience-item">
                     <h3>University of California, Berkeley</h3>
-                    <p class="role">Teaching Assistant - Intro to iOS Development</p>
-                    <p class="duration">Jan 2017 - May 2017 · 5 mos</p>
-                </div>
-
-                <div class="experience-item">
-                    <h3>University of California, Berkeley</h3>
-                    <p class="role">Computer Lab Assistant - CS 10</p>
-                    <p class="duration">Jan 2015 - Dec 2015 · 1 yr</p>
+                    <p class="role">Teaching Assistant</p>
+                    <p class="duration">Sep 2017 - May 2018 · Berkeley, CA</p>
+                    <ul class="experience-details">
+                        <li>Intro to CS: Taught a lab of 35 students the basics of programming and foundational programming language ideologies</li>
+                        <li>iOS Development: Taught core iOS features to a class of 20 students - MVC, AutoLayout, Multiviews, Table/Collection Views, Mapkit</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -111,8 +212,8 @@
                 <h2>Education</h2>
                 <div class="education-item">
                     <h3>University of California, Berkeley</h3>
-                    <p class="degree">Bachelor of Arts (B.A.), Computer Science</p>
-                    <p class="duration">2014 - 2018</p>
+                    <p class="degree">Bachelor of Arts (B.A.), Computer Science · Class of 2018</p>
+                    <p class="coursework">Relevant Coursework: Artificial Intelligence, Computer Security, Database Management Systems, Internet Architecture, Efficient Algorithms and Intractable Problems, Data Structures, Linear Algebra</p>
                 </div>
             </div>
         </section>
@@ -121,6 +222,9 @@
             <div class="container">
                 <h2>Contact</h2>
                 <div class="social-links">
+                    <a href="https://github.com/MaazUddin11" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
                     <a href="https://www.linkedin.com/in/maaz-z-uddin/" target="_blank">
                         <i class="fab fa-linkedin"></i> LinkedIn
                     </a>
@@ -131,7 +235,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Maaz Uddin. All rights reserved.</p>
+            <p>&copy; 2025 Maaz Uddin. All rights reserved.</p>
         </div>
     </footer>
 </body>
